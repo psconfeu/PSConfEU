@@ -1,0 +1,105 @@
+---
+
+# Invoke-Build Header to be used to 'decorate' the terminal output of the tasks.
+TaskHeader: |
+  param($Path)
+  ""
+  "=" * 79
+  Write-Build Cyan "`t`t`t$($Task.Name.replace("_"," ").ToUpper())"
+  Write-Build DarkGray  "$(Get-BuildSynopsis $Task)"
+  "-" * 79
+  Write-Build DarkGray "  $Path"
+  Write-Build DarkGray "  $($Task.InvocationInfo.ScriptName):$($Task.InvocationInfo.ScriptLineNumber)"
+  ""
+
+####################################################
+# Pipeline Build Task Configuration (Invoke-Build) #
+####################################################
+
+BuildWorkflow:
+  '.': 
+    - build
+    - test
+
+  build:
+    - Clean
+    - Build_Module_ModuleBuilder
+    - Build_NestedModules_ModuleBuilder
+    - Create_changelog_release_output
+
+  pack:
+    - build
+    - package_module_nupkg
+
+  test:
+    - Pester_Tests_Stop_On_Fail
+    #- Convert_Pester_Coverage
+    - Pester_if_Code_Coverage_Under_Threshold
+
+  # Use this task when you have multiple parallel tests, which produce multiple
+  # code coverage files and needs to get merged into one file.
+  #merge:
+    #- Merge_CodeCoverage_Files
+
+  publish:
+    - publish_module_to_gallery
+    - Publish_Release_To_GitHub
+
+####################################################
+#          ModuleBuilder Configuration             #
+####################################################
+CopyPaths:
+  - en-US
+Encoding: UTF8
+VersionedOutputDirectory: true
+
+####################################################
+#       PESTER  Configuration                      #
+####################################################
+
+Pester:
+  OutputFormat: NUnitXML
+  ExcludeFromCodeCoverage:
+
+  Script:
+  # - tests/QA/module.tests.ps1
+  # - tests/QA
+  # - tests/Unit
+  # - tests/Integration
+  ExcludeTag:
+  #  - helpQuality
+  #  - FunctionalQuality
+  #  - TestQuality
+  Tag:
+  CodeCoverageThreshold: 20 # Set to 0 to bypass
+
+
+# Import ModuleBuilder tasks from a specific PowerShell module using the build
+# task's alias. Wildcard * can be used to specify all tasks that has a similar
+# prefix and or suffix. The module contain the task must be added as a required
+# module in the file RequiredModules.psd1.
+ModuleBuildTasks:
+  Sampler:
+    - '*.build.Sampler.ib.tasks'
+  Sampler.GitHubTasks:
+    - '*.ib.tasks'
+
+####################################################
+#              PSDepend Configuration              #
+####################################################
+Resolve-Dependency:
+  Gallery: 'PSGallery'
+  AllowPrerelease: false
+  Verbose: false
+
+####################################################
+#               GitHub Configuration               #
+####################################################
+GitHubConfig:
+  GitHubFilesToAdd:
+    - 'CHANGELOG.md'
+  GitHubConfigUserName: BeardAutoBot
+  GitHubConfigUserEmail: mrrobsewell@outlook.com
+  UpdateChangelogOnPrerelease: true
+
+
