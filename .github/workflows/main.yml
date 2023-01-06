@@ -230,7 +230,7 @@ jobs:
       uses: andymckay/append-gist-action@1fbfbbce708a39bd45846f0955ed5521f2099c6d
       with:
         token: ${{ secrets.GIST_TOKEN }}
-        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/b1fc4cba1712da56f2673c147f5787f2
+        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/425f3c5d5bb84a0fecda52cc5ed03748
         file: macos-badge.svg
     - name: Set Linux badge color
       shell: bash
@@ -261,7 +261,7 @@ jobs:
       uses: andymckay/append-gist-action@1fbfbbce708a39bd45846f0955ed5521f2099c6d
       with:
         token: ${{ secrets.GIST_TOKEN }}
-        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/b1fc4cba1712da56f2673c147f5787f2
+        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/425f3c5d5bb84a0fecda52cc5ed03748
         file: linux-badge.svg
     - name: Set WinPS51 badge color
       shell: bash
@@ -292,7 +292,7 @@ jobs:
       uses: andymckay/append-gist-action@1fbfbbce708a39bd45846f0955ed5521f2099c6d
       with:
         token: ${{ secrets.GIST_TOKEN }}
-        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/b1fc4cba1712da56f2673c147f5787f2
+        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/425f3c5d5bb84a0fecda52cc5ed03748
         file: winps51-badge.svg
     - name: Set WinPS7 badge color
       shell: bash
@@ -323,7 +323,7 @@ jobs:
       uses: andymckay/append-gist-action@1fbfbbce708a39bd45846f0955ed5521f2099c6d
       with:
         token: ${{ secrets.GIST_TOKEN }}
-        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/b1fc4cba1712da56f2673c147f5787f2
+        gistURL: https://gist.githubusercontent.com/SQLDBAWithABeard/425f3c5d5bb84a0fecda52cc5ed03748
         file: winps7-badge.svg
   Deploy_Stage_Deploy_Module:
     name: Deploy Module

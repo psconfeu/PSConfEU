@@ -71,7 +71,7 @@ function Get-PSConfEUSchedule {
         $show
     )
 
-    $BaseUri = 'https://sessionize.com/api/v2/u1qovn3p/view'
+    $BaseUri = 'https://sessionize.com/api/v2/dkxcjtm2/view'
     $Date = Get-Date -Format 'yyyy-MM-dd-HH-mm-ss'
 
     #TODO Add other options
