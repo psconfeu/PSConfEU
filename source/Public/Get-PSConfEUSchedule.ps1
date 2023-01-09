@@ -57,6 +57,7 @@ function Get-PSConfEUSchedule {
     .NOTES
         Author: Rob Sewell
         December 2022
+        
 #>
     [CmdletBinding()]
     param (
