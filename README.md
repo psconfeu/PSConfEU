@@ -3,11 +3,11 @@
 A module for gathering information about PSConfEU agenda from Sessionize, tested on Windows, Mac and Linux for Windows PowerShell and pwsh
 
 
-[![.github/workflows/main.yml](https://github.com/SQLDBAWithABeard/PSConfEU/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/SQLDBAWithABeard/PSConfEU/actions/workflows/main.yml) 
-[![GitHub release badge](https://badgen.net/github/release/SQLDBAWithABeard/PSConfEU/stable)](https://github.com/SQLDBAWithABeard/PSConfEU/releases/latest)
+[![.github/workflows/main.yml](https://github.com/PSConfEU/PSConfEU/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/PSConfEU/PSConfEU/actions/workflows/main.yml) 
+[![GitHub release badge](https://badgen.net/github/release/PSConfEU/PSConfEU/stable)](https://github.com/PSConfEU/PSConfEU/releases/latest)
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/v/PSConfEU?label=PSConfEU)](https://www.powershellgallery.com/packages/PSConfEU/)  
-[![GitHub license badge](https://badgen.net/github/license/SQLDBAWithABeard/PSConfEU)](https://github.com/SQLDBAWithABeard/PSConfEU/blob/43423437f831e2844452d482a50864f224f12534/LICENSE)  
-[![GitHub releases badge](https://badgen.net/github/releases/SQLDBAWithABeard/PSConfEU)](https://github.com/SQLDBAWithABeard/PSConfEU/releases)  
+[![GitHub license badge](https://badgen.net/github/license/PSConfEU/PSConfEU)](https://github.com/PSConfEU/PSConfEU/blob/43423437f831e2844452d482a50864f224f12534/LICENSE)  
+[![GitHub releases badge](https://badgen.net/github/releases/PSConfEU/PSConfEU)](https://github.com/PSConfEU/PSConfEU/releases)  
 ![Ubuntu Linux](https://badgen.net/badge/icon/Ubuntu?icon=terminal&label)[![Linux Tests](https://gist.githubusercontent.com/SQLDBAWithABeard/b1fc4cba1712da56f2673c147f5787f2/raw/linux-badge.svg)](https://github.com/SQLDBAWithABeard/PSConfEU/actions/)  
 ![macOS](https://badgen.net/badge/icon/macOS?icon=apple&label)[![MacOs Tests](https://gist.githubusercontent.com/SQLDBAWithABeard/b1fc4cba1712da56f2673c147f5787f2/raw/macos-badge.svg)](https://github.com/SQLDBAWithABeard/PSConfEU/actions/)  
 ![Windows badge](https://badgen.net/badge/icon/windows?icon=windows&label)[![Windows pwsh Tests](https://gist.githubusercontent.com/SQLDBAWithABeard/b1fc4cba1712da56f2673c147f5787f2/raw/winps7-badge.svg)](https://github.com/SQLDBAWithABeard/PSConfEU/actions/)  
