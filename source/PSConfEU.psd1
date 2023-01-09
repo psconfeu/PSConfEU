@@ -96,16 +96,16 @@ PrivateData = @{
 
         Prerelease = ''
         # Tags applied to this module. These help with module discovery in online galleries.
-         Tags = @('PSConfEU', 'Sessionize', 'Agenda', 'Training', 'Sessions')
+         Tags = @('PSConfEU', 'Sessionize', 'Agenda', 'Training', 'Sessions', 'PowerShell Conference Europe')
 
         # A URL to the license for this module.
-         LicenseUri = 'https://github.com/SQLDBAWithABeard/PSConfEU/blob/main/LICENSE'
+         LicenseUri = 'https://github.com/psconfeu/PSConfEU/blob/main/LICENSE'
 
         # A URL to the main website for this project.
-         ProjectUri = 'https://github.com/SQLDBAWithABeard/PSConfEU'
+         ProjectUri = 'https://github.com/psconfeu/PSConfEU'
 
         # A URL to an icon representing this module.
-        # IconUri = ''
+         IconUri = 'https://psconf.eu/wp-content/uploads/2022/01/psconfeu_logo_128px.png'
 
         # ReleaseNotes of this module
         # ReleaseNotes = ''
