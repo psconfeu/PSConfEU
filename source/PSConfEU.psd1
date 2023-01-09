@@ -96,7 +96,7 @@ PrivateData = @{
 
         Prerelease = ''
         # Tags applied to this module. These help with module discovery in online galleries.
-         Tags = @('PSConfEU', 'Sessionize', 'Agenda', 'Training', 'Sessions', 'PowerShell Conference Europe')
+         Tags = @('PSConfEU', 'Sessionize', 'Agenda', 'Training', 'Sessions', 'PowerShellConferenceEurope')
 
         # A URL to the license for this module.
          LicenseUri = 'https://github.com/psconfeu/PSConfEU/blob/main/LICENSE'
