@@ -52,7 +52,7 @@ function Get-PSConfEUSchedule {
         Thursday 14:10     15:00   MR 1B       Buck Woody Arc, Arc and Arc: De-mystifying Azure Arc for Data…
         Friday 12:00     12:50   Expo Room 2 Buck Woody The Microsoft Intelligent Data Platform…
 
-        Gets the PSConfEU Schedule from the Sessionize API searches fro Buck and outputs an object
+        Gets the PSConfEU Schedule from the Sessionize API searches for Buck and outputs an object
 
     .NOTES
         Author: Rob Sewell
