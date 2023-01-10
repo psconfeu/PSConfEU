@@ -10,8 +10,8 @@ function Get-PSConfEUSchedule {
     .PARAMETER output
         The type of output required. Valid values are json, excel, psobject, html or csv
 
-    .PARAMETER speaker
-        A wild card search for a speaker
+    .PARAMETER search
+        A wild card search best used to find a speaker
 
     .PARAMETER fileDirectory
         The directory to save the output file to - defaults to Env:Temp
@@ -64,7 +64,7 @@ function Get-PSConfEUSchedule {
         [ValidateSet('raw', 'excel', 'object', 'csv', 'html')]
         $output = 'excel',
         [string]
-        $speaker,
+        $search,
         [string]
         $fileDirectory = $env:TEMP,
         [switch]
@@ -140,13 +140,13 @@ function Get-PSConfEUSchedule {
     $sessions = $rawsessions | Group-Object -Property StartsAt | Select-Object $props
 
     # if we have a speaker filter, filter the sessions
-    if ($speaker) {
+    if ($search) {
         $Results = @{Name = 'Results'; Expression = {
-                $_.psobject.properties.Value -like "*$speaker*" 
+                $_.psobject.properties.Value -like "*$search*" 
             }
         }
         $RoomSearch = @{Name = 'Room'; Expression = {
-            ($_.psobject.properties | Where-Object { $_.Value -like "*$speaker*" } ).Name
+            ($_.psobject.properties | Where-Object { $_.Value -like "*$search*" } ).Name
             }
         }
         $speakerSearch = @{Name = 'speakers'; Expression = { ($_.Results -Split "`n")[1] } }
