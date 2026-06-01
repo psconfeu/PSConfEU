@@ -353,7 +353,7 @@ jobs:
       env:
         GitHubToken: ${{ secrets.GitHubToken }}
         GalleryApiToken: ${{ secrets.GalleryApiToken }} 
-    - name: Send Changelog PR
+    - name: Send Changelog PR 
       shell: pwsh
       run: Get-Module -Name PowerShellForGitHub -ListAvailable ;./build.ps1  -tasks Create_ChangeLog_GitHub_PR
       env:
