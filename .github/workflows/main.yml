@@ -349,7 +349,7 @@ jobs:
         path: ${{ env.buildFolderName }}
     - name: Publish Release
       shell: pwsh
-      run: Import-Module ./output/RequiredModules/PowerShellForGitHub/0.16.1/PowerShellForGitHub.psd1 ; ./build.ps1 -tasks publish
+      run: Install-Module PowerShellForGitHub -RequiredVersion 0.16.1 -Force;Import-Module PowerShellForGitHub -RequiredVersion 0.16.1 -Force; ./build.ps1 -tasks publish
       env:
         GitHubToken: ${{ secrets.GitHubToken }}
         GalleryApiToken: ${{ secrets.GalleryApiToken }} 
